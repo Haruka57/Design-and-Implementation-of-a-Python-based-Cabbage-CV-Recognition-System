@@ -1,0 +1,4 @@
+train: D:\卷心菜cv识别\dataset\images\val
+val: D:\卷心菜cv识别\dataset\images\val
+nc: 2
+names: ['cabbage', 'cutcabbage']

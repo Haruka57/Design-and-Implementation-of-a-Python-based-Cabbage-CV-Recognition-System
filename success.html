@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>卷心菜CV识别平台</title>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8fbfa 0%, #f7f2f7 100%);
+            font-family: 'ZCOOL KuaiLe', 'Comic Sans MS', '微软雅黑', cursive, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .modal-mask {
+            position: fixed;
+            z-index: 999;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .modal-content {
+            max-width: 500px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px #b2dfdb22;
+            padding: 48px 40px 40px 40px;
+            border: 1.5px solid #e0e0e0;
+            text-align: center;
+            position: relative;
+            animation: popin 0.4s;
+        }
+        @keyframes popin {
+            0% { transform: scale(0.7); opacity: 0;}
+            100% { transform: scale(1); opacity: 1;}
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 18px;
+            font-size: 64px;
+            line-height: 80px;
+        }
+        h1 {
+            color: #7bb47b;
+            font-size: 2.2em;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+            font-family: 'ZCOOL KuaiLe', 'Comic Sans MS', cursive, sans-serif;
+        }
+        .desc {
+            color: #666;
+            font-size: 1.18em;
+            margin-bottom: 32px;
+            font-family: 'ZCOOL KuaiLe', 'Comic Sans MS', cursive, sans-serif;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 36px;
+            background: #7bb47b;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.15em;
+            font-family: 'ZCOOL KuaiLe', 'Comic Sans MS', cursive, sans-serif;
+            text-decoration: none;
+            margin-top: 18px;
+            transition: background 0.2s;
+            cursor: pointer;
+            letter-spacing: 2px;
+        }
+        .btn:hover {
+            background: #4caf50;
+        }
+        .close-btn {
+            position: absolute;
+            right: 18px;
+            top: 18px;
+            background: none;
+            border: none;
+            font-size: 1.6em;
+            color: #bbb;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .close-btn:hover {
+            color: #7bb47b;
+        }
+        /* 主页内容样式 */
+        .main-content {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px #b2dfdb22;
+            padding: 40px 36px 36px 36px;
+            border: 1.5px solid #e0e0e0;
+        }
+        .main-content h2 {
+            color: #7bb47b;
+            font-size: 2em;
+            margin-bottom: 18px;
+            font-family: 'ZCOOL KuaiLe', 'Comic Sans MS', cursive, sans-serif;
+        }
+        .main-content ul {
+            font-size: 1.15em;
+            color: #444;
+            line-height: 2.1;
+            margin-bottom: 0;
+            padding-left: 22px;
+        }
+        .main-content li {
+            margin-bottom: 8px;
+        }
+        .main-content .tip {
+            color: #888;
+            font-size: 1em;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="modal-mask" id="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()" title="关闭">×</button>
+        <div class="logo">
+            🥬
+        </div>
+        <h1>欢迎来到卷心菜CV识别平台</h1>
+        <div class="desc">
+            恭喜你，登录成功！<br>
+            你现在可以开始使用卷心菜计算机视觉识别相关功能。
+        </div>
+        <a href="javascript:void(0);" class="btn" onclick="closeModal()">进入平台首页</a>
+    </div>
+</div>
+
+<!-- 主页内容 -->
+<div class="main-content">
+    <h2>平台功能导航</h2>
+    <ul>
+        <li>🥬 图像上传与识别：上传卷心菜图片，自动识别品种与健康状况</li>
+        <li>📊 数据分析：查看识别历史与统计报表</li>
+        <li>📝 用户中心：管理个人信息与密码</li>
+        <li>📚 帮助文档：平台使用说明与常见问题解答</li>
+    </ul>
+    <div class="tip">
+        温馨提示：如有疑问请联系管理员 QQ: 123456789 或邮箱 hello@example.com
+    </div>
+</div>
+
+<script>
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+</body>
+</html>
